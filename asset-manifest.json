@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "https://phatth2016.github.io/test/static/css/main.d06d246c.css",
-    "main.js": "https://phatth2016.github.io/test/static/js/main.2ba3574c.js",
+    "main.js": "https://phatth2016.github.io/test/static/js/main.aebd1abc.js",
     "static/js/787.0c3f432a.chunk.js": "https://phatth2016.github.io/test/static/js/787.0c3f432a.chunk.js",
     "index.html": "https://phatth2016.github.io/test/index.html",
     "main.d06d246c.css.map": "https://phatth2016.github.io/test/static/css/main.d06d246c.css.map",
-    "main.2ba3574c.js.map": "https://phatth2016.github.io/test/static/js/main.2ba3574c.js.map",
+    "main.aebd1abc.js.map": "https://phatth2016.github.io/test/static/js/main.aebd1abc.js.map",
     "787.0c3f432a.chunk.js.map": "https://phatth2016.github.io/test/static/js/787.0c3f432a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d06d246c.css",
-    "static/js/main.2ba3574c.js"
+    "static/js/main.aebd1abc.js"
   ]
 }
