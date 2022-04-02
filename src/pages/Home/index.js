@@ -26,7 +26,7 @@ export default function Home({setScreen}) {
         </div>
 
         <div className='group-action'>
-          <div className='action'>
+          <div className='action disable'>
             <img src={process.env.PUBLIC_URL + "/images/icon/deposit.png"} alt="#Deposit" />
             <span>Deposit</span>
           </div>
@@ -34,7 +34,7 @@ export default function Home({setScreen}) {
             <img src={process.env.PUBLIC_URL + "/images/icon/send.png"} alt="#send" />
             <span>Send</span>
           </div>
-          <div className='action'>
+          <div className='action disable'>
             <img src={process.env.PUBLIC_URL +"/images/icon/swap.png"} alt="#swap" />
             <span>Swap</span>
           </div>

@@ -59,6 +59,13 @@ export const SendStyled = styled.div`
       }
     }
   }
+
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 160px;
+  }
+
   .footer {
     display: flex;
     position: absolute;

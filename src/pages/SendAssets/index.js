@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
+import Loading from '../../components/Loading'
 import PopupAssets from './PopupAsset'
 import PopupSend from './PopupSend'
 import { SendStyled } from './styled'
@@ -9,12 +10,14 @@ export default function index({setScreen}) {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [isShowPopupAsset, setShowPopupAsset] = useState(false)
-
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [isShowPopupSuccess, setShowPopupSuccess] = useState(false)
-
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [data, setData] = useState({})
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [isLoading, setLoading] = useState(false)
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [isValidated, setValidated] = useState(true)
 
     const handlePopup = () => {
       setShowPopupAsset(!isShowPopupAsset)
@@ -29,10 +32,15 @@ export default function index({setScreen}) {
     }
 
     const handleSendToken = () => {
-      if (!data.asset||!data.amount||!data.to) {
-        return null
+      if (!data.asset||!data.amount||!data.to || !data.asset) {
+        return setValidated(false)
       }
-      setShowPopupSuccess(!isShowPopupSuccess)
+      setLoading(true)
+      setTimeout(() => {
+        setValidated(true)
+        setLoading(false)
+        setShowPopupSuccess(!isShowPopupSuccess)
+      }, 2000)
     }
 
   return (
@@ -66,10 +74,12 @@ export default function index({setScreen}) {
       </div>
       {isShowPopupAsset && <PopupAssets handlePopup={handlePopup} onChangeData={onChangeData}/>}
       {isShowPopupSuccess && <PopupSend data={data} handlePopupSuccess={handlePopupSuccess}/> }
+      {!isValidated&&<div className='error'>Sorry, but your form was not submited! Please correct all field: From, To, Assets, Amount and submit the form again.</div>}
       <div className='footer'>
         <Button className="btn-cancel" onClick={() => setScreen(2)}>Cancel</Button>
         <Button onClick={handleSendToken}>Send</Button>
       </div>
+      {isLoading && <Loading text="sending"/>}
     </SendStyled>
   )
 }

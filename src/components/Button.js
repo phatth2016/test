@@ -22,4 +22,9 @@ const ButtonStyled = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  :hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px #1273EA;
+    transition-duration: 500ms;
+  }
 `;

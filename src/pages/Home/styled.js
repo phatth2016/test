@@ -43,7 +43,9 @@ export const HomeStyled = styled.div`
         justify-content: space-between;
         padding-bottom: 14px;
         border-bottom: 1px solid #68B8F850;
-
+        img {
+          cursor: pointer;
+        }
         div > span {
           font-weight: 400;
           font-size: 14px;
@@ -102,6 +104,17 @@ export const HomeStyled = styled.div`
           text-align: center;
           color: #151A30;
           margin-top: 4px;
+        }
+        :hover {
+          img {
+            transform: rotate(10deg);
+            transition-duration: 500ms
+          }
+        }
+        &.disable {
+          span {
+            opacity: 0.5;
+          }
         }
       }
     }

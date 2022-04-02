@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const PopupStyled = styled.div`
+  height: 550px;
   .header {
     border-bottom: 1px solid #C5CEE0;
   }
