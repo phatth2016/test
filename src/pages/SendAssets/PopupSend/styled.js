@@ -5,7 +5,7 @@ export const Styled = styled.div`
   display: flex;
   flex-direction: column;
   .title {
-    font-family: 'SF Pro Text';
+    font-family: 'SF Pro Display';
     font-weight: 700;
     font-size: 20px;
     line-height: 28px;
@@ -15,7 +15,7 @@ export const Styled = styled.div`
     text-align: center;
   }
   .desc {
-    font-family: 'SF Pro Text';
+    font-family: 'SF Pro Display';
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;

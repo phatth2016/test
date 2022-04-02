@@ -11,7 +11,7 @@ export const HomeStyled = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-family: 'SF Pro Text';
+      font-family: 'SF Pro Display';
       font-weight: 700;
       font-size: 12px;
       line-height: 20px;
@@ -34,7 +34,7 @@ export const HomeStyled = styled.div`
       padding: 18px 20px;
       margin-top: 20px;
       .address {
-        font-family: 'SF Pro Text';
+        font-family: 'SF Pro Display';
         font-weight: 600;
         font-size: 14px;
         line-height: 20px;
@@ -59,7 +59,7 @@ export const HomeStyled = styled.div`
         margin-top: 12px;
         .group {
           .balance-usd {
-            font-family: 'SF Pro Text';
+            font-family: 'SF Pro Display';
             font-style: normal;
             font-weight: 700;
             font-size: 32px;
@@ -95,7 +95,7 @@ export const HomeStyled = styled.div`
           height: 48px;
         }
         span {
-          font-family: 'SF Pro Text';
+          font-family: 'SF Pro Display';
           font-weight: 600;
           font-size: 12px;
           line-height: 20px;
@@ -109,7 +109,7 @@ export const HomeStyled = styled.div`
   
   .assets {
     .label {
-      font-family: 'SF Pro Text';
+      font-family: 'SF Pro Display';
       font-weight: 700;
       font-size: 16px;
       line-height: 20px;
@@ -130,14 +130,14 @@ export const HomeStyled = styled.div`
         .balance-of-token {
           margin-left: 16px;
           .count {
-            font-family: 'SF Pro Text';
+            font-family: 'SF Pro Display';
             font-weight: 600;
             font-size: 14px;
             line-height: 20px;
             color: #151A30;
           }
           .vnd {
-            font-family: 'SF Pro Text';
+            font-family: 'SF Pro Display';
             font-weight: 400;
             font-size: 12px;
             line-height: 16px;

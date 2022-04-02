@@ -32,14 +32,14 @@ export default function index({handlePopup, onChangeData, setScreen}) {
         <div className='header'>
           Assets
         </div>
-        <img className='btn-close' src="/images/icon/close.png" alt="#" onClick={handlePopup}/>
+        <img className='btn-close' src={process.env.PUBLIC_URL + "/images/icon/close.png"} alt="#" onClick={handlePopup}/>
 
         <div className='group-assets'>
         {
           ASSETS.map(item => {
             return (
               <div className='asset' onClick={() => handleSelectAsset(item)}>
-                <img src={item.icon} alt="#token" />
+                <img src={ process.env.PUBLIC_URL + item.icon} alt="#token" />
                 <div className='balance-of-token'>
                   <div className='count'>{item.amount} {item.token}</div>
                   <div className='vnd'>{item.vnd} VND</div>

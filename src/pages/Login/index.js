@@ -6,7 +6,7 @@ import { LoginStyled } from './styled'
 export default function Login({setScreen}) {
   return (
     <LoginStyled>
-      <img src="/images/logo.png" />
+      <img src={process.env.PUBLIC_URL + "/images/logo.png" }/>
       <div className='app-name'>Ronin Wallet</div>
       <div className='title'>Your Digital Passport</div>
       <Input 

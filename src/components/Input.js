@@ -10,7 +10,7 @@ export default function Input (props) {
         {props.note && <Label>{props.note}</Label>}
       </span>
       <InputStyled {...props} />
-      {props.icon && <img src={props.icon} />}
+      {props.icon && <img src={process.env.PUBLIC_URL + props.icon} />}
     </Styled>
   )
 }
@@ -31,7 +31,7 @@ const Styled =styled.div`
 `;
 
 const Label = styled.label`
-  font-family: 'SF Pro Text';
+  font-family: 'SF Pro Display';
   font-weight: 700;
   font-size: 10px;
   line-height: 16px;
@@ -51,7 +51,7 @@ const InputStyled = styled.input`
   :focus {
     outline: none;
   }
-  font-family: 'SF Pro Text';
+  font-family: 'SF Pro Display';
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;

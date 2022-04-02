@@ -12,7 +12,7 @@ const ButtonStyled = styled.div`
   height: 40px;
   background: linear-gradient(256.28deg, #1C94F4 0%, #1273EA 100%);
   border-radius: 8px;
-  font-family: 'SF Pro Text';
+  font-family: 'SF Pro Display';
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;

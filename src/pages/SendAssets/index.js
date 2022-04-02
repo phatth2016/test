@@ -38,7 +38,7 @@ export default function index({setScreen}) {
   return (
     <SendStyled>
       <div className='header'>
-        <img className='btn-close' src="/images/icon/back.png" alt="#back" onClick={() => setScreen(2)}/>
+        <img className='btn-close' src={process.env.PUBLIC_URL + "/images/icon/back.png"} alt="#back" onClick={() => setScreen(2)}/>
           Send Assets
       </div>
       <div className='form'>
@@ -53,7 +53,7 @@ export default function index({setScreen}) {
         />
         <label>Assets</label>
         <div className='assets' onClick={handlePopup}>
-         {data.asset && (<><img src={data.asset?.icon} alt="#" /> {data.asset?.token} </>)}
+         {data.asset && (<><img src={process.env.PUBLIC_URL + data.asset?.icon} alt="#" /> {data.asset?.token} </>)}
         </div>
 
         <Input 
