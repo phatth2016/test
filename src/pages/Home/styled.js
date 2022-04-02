@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const HomeStyled = styled.div`
   .wallet-info {
-    background-image: url("/images/bg-home.png");
+    background-image: url(${process.env.PUBLIC_URL + "/images/bg-home.png"});
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 20px;
