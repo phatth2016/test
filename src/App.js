@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 import './App.css';
+import Home from './pages/Home';
 import Login from './pages/Login'
+import SendAssets from './pages/SendAssets'
 
 function App() {
   return (
     <ScreenStyled>
-      <Login />
+      {/* <Login /> */}
+      {/* <Home /> */}
+      <SendAssets />
     </ScreenStyled>
   );
 }
