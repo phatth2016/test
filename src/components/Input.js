@@ -10,7 +10,7 @@ export default function Input (props) {
         {props.note && <Label>{props.note}</Label>}
       </span>
       <InputStyled {...props} />
-      {props.icon && <img src={process.env.PUBLIC_URL + props.icon} />}
+      {props.icon && <img src={process.env.PUBLIC_URL + props.icon} onClick={() => props.onMax('amount', props.amount)} alt="#"/>}
     </Styled>
   )
 }

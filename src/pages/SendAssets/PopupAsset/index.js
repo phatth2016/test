@@ -1,23 +1,7 @@
 import React from 'react'
 import Popup from '../../../components/Popup'
 import { PopupStyled } from './styled'
-
-const ASSETS= [
-  {
-    id: 1,
-    token: "EUR",
-    amount: 50,
-    vnd: "1,531,972 VND",
-    icon: "/images/icon/eur.png"
-  },
-  {
-    id: 2,
-    token: "YEN",
-    amount: 50,
-    vnd: "1,531,972 VND",
-    icon: "/images/icon/yen.png"
-  }
-]
+import { ASSETS } from '../../../constants/data'
 
 export default function index({handlePopup, onChangeData, setScreen}) {
 

@@ -32,7 +32,7 @@ export default function index({setScreen}) {
     }
 
     const handleSendToken = () => {
-      if (!data.asset||!data.amount||!data.to || !data.asset) {
+      if (!data.asset||!data.amount||!data.to) {
         return setValidated(false)
       }
       setLoading(true)
@@ -42,6 +42,8 @@ export default function index({setScreen}) {
         setShowPopupSuccess(!isShowPopupSuccess)
       }, 2000)
     }
+
+    console.log("data", data)
 
   return (
     <SendStyled>
@@ -69,7 +71,10 @@ export default function index({setScreen}) {
           icon="/images/icon/max.png"
           note="available: 50 EUR"
           type="number"
+          value={data?.amount}
           onChange={(e) => onChangeData("amount", e.target.value)}
+          onMax={onChangeData}
+          amount={data.asset?.amount || 0}
         />
       </div>
       {isShowPopupAsset && <PopupAssets handlePopup={handlePopup} onChangeData={onChangeData}/>}

@@ -16,6 +16,9 @@ export const HomeStyled = styled.div`
       font-size: 12px;
       line-height: 20px;
       color: #151A30;
+      img {
+        cursor: pointer;
+      }
       .app-name {
         background: #F7F9FC;
         border-radius: 8px;

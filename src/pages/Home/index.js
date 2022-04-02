@@ -1,5 +1,6 @@
 import React from 'react'
 import { HomeStyled } from './styled'
+import { DATA } from '../../constants/data'
 
 export default function Home({setScreen}) {
   return (
@@ -18,8 +19,8 @@ export default function Home({setScreen}) {
 
           <div className='balance'>
             <div className='group'>
-              <div className='balance-usd'>1,000 USD</div>
-              <div className='balance-vnd'>23,046,000 VND </div>
+              <div className='balance-usd'>{DATA.balanceUsd}USD</div>
+              <div className='balance-vnd'>{DATA.balanceVnd} VND </div>
             </div>
             <img src={process.env.PUBLIC_URL + "/images/icon/ronin-white.png"} alt="#icon" />
           </div>
@@ -44,20 +45,19 @@ export default function Home({setScreen}) {
       <div className='assets'>
         <div className='label'>Assets</div>
         <div className='group-assets'>
-          <div className='asset'>
-            <img src={process.env.PUBLIC_URL + "/images/icon/eur.png" }alt="#token" />
-            <div className='balance-of-token'>
-              <div className='count'>50 EUR</div>
-              <div className='vnd'>1,531,972 VND</div>
-            </div>
-          </div>
-          <div className='asset'>
-            <img src={process.env.PUBLIC_URL + "/images/icon/yen.png"} alt="#token" />
-            <div className='balance-of-token'>
-              <div className='count'>50 YEN</div>
-              <div className='vnd'>1,531,972 VND</div>
-            </div>
-          </div>
+        {
+          DATA.assets.map((item, index) => {
+            return (
+              <div key={index} className='asset'>
+                <img src={process.env.PUBLIC_URL + item.icon }alt="#token" />
+                <div className='balance-of-token'>
+                  <div className='count'>{item.amount} {item.token}</div>
+                  <div className='vnd'>{item.vnd}</div>
+                </div>
+              </div>
+            )
+          })
+        }
         </div>
       </div>
      
