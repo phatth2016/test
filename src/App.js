@@ -1,15 +1,19 @@
 import styled from 'styled-components';
+import React, {useState} from 'react'
 import './App.css';
 import Home from './pages/Home';
 import Login from './pages/Login'
 import SendAssets from './pages/SendAssets'
 
 function App() {
+  // eslint-disable-next-line no-undef
+  const [screen, setScreen] = useState(1)
+  console.log('screen: ', screen)
   return (
     <ScreenStyled>
-      {/* <Login /> */}
-      {/* <Home /> */}
-      <SendAssets />
+      {screen === 1 && <Login setScreen={setScreen}/> }
+      {screen === 2 && <Home setScreen={setScreen} /> }
+      {screen === 3 && <SendAssets setScreen={setScreen}/>}
     </ScreenStyled>
   );
 }
@@ -23,4 +27,5 @@ const ScreenStyled = styled.div`
   margin: auto;
   background: #FFFFFF;
   padding: 20px;
+  position: relative;
 `;

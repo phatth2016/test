@@ -1,7 +1,7 @@
 import React from 'react'
 import { HomeStyled } from './styled'
 
-export default function Home() {
+export default function Home({setScreen}) {
   return (
     <HomeStyled>
       <div className='wallet-info'>
@@ -30,9 +30,9 @@ export default function Home() {
             <img src="/images/icon/deposit.png" alt="#Deposit" />
             <span>Deposit</span>
           </div>
-          <div className='action'>
+          <div className='action' onClick={() => setScreen(3)}>
             <img src="/images/icon/send.png" alt="#send" />
-            <span>Deposit</span>
+            <span>Send</span>
           </div>
           <div className='action'>
             <img src="/images/icon/swap.png" alt="#swap" />

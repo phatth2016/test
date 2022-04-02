@@ -5,8 +5,11 @@ import styled from 'styled-components'
 export default function Input (props) {
   return (
     <Styled>
-      {props.label && <Label>{props.label || "label"}</Label>}
-      <InputStyled {...props}/>
+      <span className='label'>
+        {props.label && <Label>{props.label}</Label>}
+        {props.note && <Label>{props.note}</Label>}
+      </span>
+      <InputStyled {...props} />
       {props.icon && <img src={props.icon} />}
     </Styled>
   )
@@ -20,6 +23,10 @@ const Styled =styled.div`
     right: 16px;
     bottom: 8px;
     cursor: pointer;
+  }
+  .label {
+    display: flex;
+    justify-content: space-between;
   }
 `;
 
@@ -37,7 +44,7 @@ const Label = styled.label`
 const InputStyled = styled.input`
   height: 40px;
   width: 100%;
-  background: #FFFFFF;
+  background: ${props => props.disabled ? "#C5CEE0" : "#FFFFFF"};
   border: 1px solid #C5CEE0;
   box-sizing: border-box;
   border-radius: 8px;

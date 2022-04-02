@@ -85,6 +85,7 @@ export const HomeStyled = styled.div`
       display: flex;
       margin-top: 28px;
       justify-content: center;
+      cursor: pointer;
       .action {
         display: flex;
         flex-direction: column;

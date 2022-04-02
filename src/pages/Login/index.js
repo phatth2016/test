@@ -3,7 +3,7 @@ import Button from '../../components/Button'
 import Input from '../../components/Input'
 import { LoginStyled } from './styled'
 
-export default function Login() {
+export default function Login({setScreen}) {
   return (
     <LoginStyled>
       <img src="/images/logo.png" />
@@ -14,7 +14,7 @@ export default function Login() {
         label="enter password"
         type="password"
       />
-      <Button className="btn-unlock">Unlock</Button>
+      <Button className="btn-unlock" onClick={() => setScreen(2)}>Unlock</Button>
     </LoginStyled>
   )
 }
