@@ -6,11 +6,11 @@ import { LoginStyled } from './styled'
 export default function Login({setScreen}) {
   return (
     <LoginStyled>
-      <img src={process.env.PUBLIC_URL + "/images/logo.png" }/>
+      <img src={process.env.PUBLIC_URL + "/images/logo.svg"} alt="logo"/>
       <div className='app-name'>Ronin Wallet</div>
       <div className='title'>Your Digital Passport</div>
       <Input 
-        icon="/images/icon/eye.png"
+        icon="/images/icon/eye.svg"
         label="enter password"
         type="password"
       />

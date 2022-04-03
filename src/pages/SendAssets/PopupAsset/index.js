@@ -16,13 +16,13 @@ export default function index({handlePopup, onChangeData, setScreen}) {
         <div className='header'>
           Assets
         </div>
-        <img className='btn-close' src={process.env.PUBLIC_URL + "/images/icon/close.png"} alt="#" onClick={handlePopup}/>
+        <img className='btn-close' src={process.env.PUBLIC_URL + "/images/icon/close.svg"} alt="#" onClick={handlePopup}/>
 
         <div className='group-assets'>
         {
-          ASSETS.map(item => {
+          ASSETS.map((item, index) => {
             return (
-              <div className='asset' onClick={() => handleSelectAsset(item)}>
+              <div key={index} className='asset' onClick={() => handleSelectAsset(item)}>
                 <img src={ process.env.PUBLIC_URL + item.icon} alt="#token" />
                 <div className='balance-of-token'>
                   <div className='count'>{item.amount} {item.token}</div>

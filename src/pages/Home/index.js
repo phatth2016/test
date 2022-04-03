@@ -8,13 +8,13 @@ export default function Home({setScreen}) {
       <div className='wallet-info'>
         <div className='group-header'>
           <li className='app-name'>Ronin Wallet</li>
-          <img src={process.env.PUBLIC_URL + "/images/icon/user.png"} alt="#icon"/>
+          <img src={process.env.PUBLIC_URL + "/images/icon/user.svg"} alt="#icon"/>
         </div>
 
         <div className='wallet-info'>
           <div className='address'> 
             <div>My wallet<span>(7300 3777 3888 3334)</span></div>
-            <img src={process.env.PUBLIC_URL + "/images/icon/copy.png" }alt="#icon"/>
+            <img src={process.env.PUBLIC_URL + "/images/icon/copy.svg" }alt="#icon"/>
           </div>
 
           <div className='balance'>
@@ -22,21 +22,21 @@ export default function Home({setScreen}) {
               <div className='balance-usd'>{DATA.balanceUsd}USD</div>
               <div className='balance-vnd'>{DATA.balanceVnd} VND </div>
             </div>
-            <img src={process.env.PUBLIC_URL + "/images/icon/ronin-white.png"} alt="#icon" />
+            <img src={process.env.PUBLIC_URL + "/images/icon/ronin-white.svg"} alt="#icon" />
           </div>
         </div>
 
         <div className='group-action'>
           <div className='action disable'>
-            <img src={process.env.PUBLIC_URL + "/images/icon/deposit.png"} alt="#Deposit" />
+            <img src={process.env.PUBLIC_URL + "/images/icon/deposit.svg"} alt="#Deposit" />
             <span>Deposit</span>
           </div>
           <div className='action' onClick={() => setScreen(3)}>
-            <img src={process.env.PUBLIC_URL + "/images/icon/send.png"} alt="#send" />
+            <img src={process.env.PUBLIC_URL + "/images/icon/send.svg"} alt="#send" />
             <span>Send</span>
           </div>
           <div className='action disable'>
-            <img src={process.env.PUBLIC_URL +"/images/icon/swap.png"} alt="#swap" />
+            <img src={process.env.PUBLIC_URL +"/images/icon/swap.svg"} alt="#swap" />
             <span>Swap</span>
           </div>
         </div>

@@ -115,9 +115,7 @@ export const HomeStyled = styled.div`
           }
         }
         &.disable {
-          span {
-            opacity: 0.5;
-          }
+          opacity: 0.5;
         }
       }
     }

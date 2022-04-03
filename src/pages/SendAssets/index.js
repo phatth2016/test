@@ -43,12 +43,10 @@ export default function index({setScreen}) {
       }, 2000)
     }
 
-    console.log("data", data)
-
   return (
     <SendStyled>
       <div className='header'>
-        <img className='btn-close' src={process.env.PUBLIC_URL + "/images/icon/back.png"} alt="#back" onClick={() => setScreen(2)}/>
+        <img className='btn-close' src={process.env.PUBLIC_URL + "/images/icon/back.svg"} alt="#back" onClick={() => setScreen(2)}/>
           Send Assets
       </div>
       <div className='form'>
@@ -68,8 +66,8 @@ export default function index({setScreen}) {
 
         <Input 
           label="Amount"
-          icon="/images/icon/max.png"
-          note="available: 50 EUR"
+          icon="/images/icon/max.svg"
+          note={`available: ${data?.asset?.amount || 0} ${data?.asset?.token || ''}`}
           type="number"
           value={data?.amount}
           onChange={(e) => onChangeData("amount", e.target.value)}

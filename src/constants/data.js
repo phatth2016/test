@@ -4,14 +4,14 @@ export const ASSETS= [
     token: "EUR",
     amount: 50,
     vnd: "1,531,972 VND",
-    icon: "/images/icon/eur.png"
+    icon: "/images/icon/eur.svg"
   },
   {
     id: 2,
     token: "YEN",
     amount: 60,
     vnd: "1,531,972 VND",
-    icon: "/images/icon/yen.png"
+    icon: "/images/icon/yen.svg"
   }
 ]
 

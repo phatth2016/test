@@ -8,7 +8,6 @@ import SendAssets from './pages/SendAssets'
 function App() {
   // eslint-disable-next-line no-undef
   const [screen, setScreen] = useState(1)
-  console.log('screen: ', screen)
   return (
     <ScreenStyled>
       {screen === 1 && <Login setScreen={setScreen}/> }
