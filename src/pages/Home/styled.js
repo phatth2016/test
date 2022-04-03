@@ -90,11 +90,11 @@ export const HomeStyled = styled.div`
       display: flex;
       margin-top: 28px;
       justify-content: center;
-      cursor: pointer;
       .action {
         display: flex;
         flex-direction: column;
         margin-right: 16px;
+        cursor: pointer;
         img {
           width: 48px;
           height: 48px;
@@ -110,12 +110,13 @@ export const HomeStyled = styled.div`
         }
         :hover {
           img {
-            transform: rotate(10deg);
+            transform: scale(1.1);
             transition-duration: 500ms
           }
         }
         &.disable {
           opacity: 0.5;
+          pointer-events: none;
         }
       }
     }

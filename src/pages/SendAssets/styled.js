@@ -22,7 +22,7 @@ export const SendStyled = styled.div`
     z-index: 1;
     img {
       position: absolute;
-      left: 0px;
+      left: 10px;
       cursor: pointer;
     }
   }

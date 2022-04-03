@@ -70,13 +70,13 @@ export default function index({setScreen}) {
           note={`available: ${data?.asset?.amount || 0} ${data?.asset?.token || ''}`}
           type="number"
           value={data?.amount}
-          onChange={(e) => onChangeData("amount", e.target.value)}
+          onChange={(e) => onChangeData("amount", e.target.value > data?.asset?.amount ? data?.asset?.amount : e.target.value )}
           onMax={onChangeData}
           amount={data.asset?.amount || 0}
         />
       </div>
       {isShowPopupAsset && <PopupAssets handlePopup={handlePopup} onChangeData={onChangeData}/>}
-      {isShowPopupSuccess && <PopupSend data={data} handlePopupSuccess={handlePopupSuccess}/> }
+      {isShowPopupSuccess && <PopupSend setScreen={setScreen} data={data} handlePopupSuccess={handlePopupSuccess}/> }
       {!isValidated&&<div className='error'>Sorry, but your form was not submited! Please correct all field: From, To, Assets, Amount and submit the form again.</div>}
       <div className='footer'>
         <Button className="btn-cancel" onClick={() => setScreen(2)}>Cancel</Button>
